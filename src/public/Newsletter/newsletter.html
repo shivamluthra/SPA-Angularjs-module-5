@@ -1,0 +1,41 @@
+<fieldset>
+  <legend> NewsLetter SignUp </legend>
+  <form name="newsletter" novalidate>
+      <label>First Name: </label>
+        <input type="text" class="newsletter" name="fname" placeholder="FirstName"
+        ng-model="newsCtrl.user.fname"
+        required />
+        <span ng-if="newsletter.fname.$error.required && newsletter.fname.$touched">
+          First Name is required</span>
+        <br><br>
+      <label>Last Name: </label>
+        <input type="text" class="newsletter" name="lname" placeholder="LastName"
+        ng-model="newsCtrl.user.lname"
+        required/>
+        <span ng-if="newsletter.lname.$error.required && newsletter.lname.$touched">
+          Last Name is required</span>
+        <br><br>
+      <label>Email: </label>
+        <input type="email" class="newsletter" name="email" placeholder="Email Address".user.email
+        ng-model="newsCtrl.user.email"
+        required/>
+        <span ng-if="newsletter.email.$invalid && newsletter.email.$touched">
+          Email should be of the format abc@something.com</span>
+          <br><br>
+      <label>Phone No: </label>
+        <input type="text" class="newsletter" name="phone" placeholder="Phone Number ###-###-####"
+        ng-model="newsCtrl.user.phone" ng-required="true"
+        pattern="(\d{3})-(\d{3})-(\d{4})"/>
+        <span ng-if="newsletter.phone.$invalid && newsletter.phone.$touched">
+          Phone No should be of the format ###-###-####</span>
+        <br><br>
+      <label> Favourite Dish </label>
+        <input type="text" class="newsletter" name="menu_number" placeholder="Menu No"
+        ng-model="newsCtrl.user.fav">
+          <span ng-if="newsCtrl.InvalidNo"> No Such Menu Number exsist</span>
+          <br><br>
+          <button class="newsletter" ng-disabled = "newsletter.$invalid"
+           ng-click="newsCtrl.submit()">Submit</button>
+  </form>
+</fieldset><br>
+<p ng-show="newsCtrl.msg">Your Information has been Saved</p>

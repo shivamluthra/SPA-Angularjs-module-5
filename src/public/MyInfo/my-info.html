@@ -1,0 +1,19 @@
+<h3>Registered Information </h3>
+
+<fieldset>
+  <div>
+    First Name : {{ $ctrl.info[0].FirstName }} <br>
+    Last Name : {{ $ctrl.info[0].LastName }} <br>
+    Email Address : {{ $ctrl.info[0].Email }} <br>
+    Phone Number : {{ $ctrl.info[0].Phone }} <br>
+  </div><br>
+  <div class="row">
+  <div style="float: left">
+      <img class="img-responsive" width="250" height="150" ng-src="{{$ctrl.info[0].imagepath}}" alt="{{$ctrl.info[0].Title}}">
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3>{{ $ctrl.info[0].Title }}</h3>
+      <p> {{ $ctrl.info[0].Description }} </p>
+    </div>
+  </div>
+</fieldset>

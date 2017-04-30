@@ -1,0 +1,11 @@
+<div>
+  <div ng-if="infoCtrl.SignUp">
+  Not Signed Up yet.<br>
+  <a ui-sref="public.newsletter">Sign up Now!</a>
+  </div>
+  <div ng-hide="infoCtrl.SignUp">
+    <h1>Info</h1>
+    <my-info info="infoCtrl.UserInfo">
+    </my-info>
+  </div>
+</div>
